@@ -16,60 +16,60 @@ class RoleAdd(BaseModel):
         orm_mode = True
 
 
-class RestaurantGet(BaseModel):
-    id: int
-    name: str
-    description: str
-    address: str
+# class RestaurantGet(BaseModel):
+#     id: int
+#     name: str
+#     description: str
+#     address: str
 
-    class Config:
-        orm_mode = True
-
-
-class RestaurantCreate(BaseModel):
-    name: str
-    description: str
-    address: str
-
-    class Config:
-        orm_mode = True
+#     class Config:
+#         orm_mode = True
 
 
-class RestaurantUpdate(BaseModel):
-    name: str = None
-    description: str = None
-    address: str = None
+# class RestaurantCreate(BaseModel):
+#     name: str
+#     description: str
+#     address: str
 
-    class Config:
-        orm_mode = True
-
-
-class TableGet(BaseModel):
-    id: int
-    name: str
-    description: str
-    smoke: bool = False
-    restaurant_id: int
-
-    class Config:
-        orm_mode = True
+#     class Config:
+#         orm_mode = True
 
 
-class TableCreate(BaseModel):
-    name: str
-    description: str
-    smoke: bool
-    restaurant_id: int
+# class RestaurantUpdate(BaseModel):
+#     name: str = None
+#     description: str = None
+#     address: str = None
 
-    class Config:
-        orm_mode = True
+#     class Config:
+#         orm_mode = True
 
 
-class TableUpdate(BaseModel):
-    name: str
-    description: str
-    smoke: bool
-    restaurant_id: int
+# class TableGet(BaseModel):
+#     id: int
+#     name: str
+#     description: str
+#     smoke: bool = False
+#     restaurant_id: int
 
-    class Config:
-        orm_mode = True
+#     class Config:
+#         orm_mode = True
+
+
+# class TableCreate(BaseModel):
+#     name: str
+#     description: str
+#     smoke: bool
+#     restaurant_id: int
+
+#     class Config:
+#         orm_mode = True
+
+
+# class TableUpdate(BaseModel):
+#     name: str
+#     description: str
+#     smoke: bool
+#     restaurant_id: int
+
+#     class Config:
+#         orm_mode = True

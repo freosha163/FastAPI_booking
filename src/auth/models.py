@@ -14,37 +14,12 @@ from fastapi_users_db_sqlalchemy import SQLAlchemyBaseUserTableUUID
 from database import Base, metadata
 
 
-# role = Table(
-#     'role',
-#     metadata,
-#     Column('id', Integer, primary_key=True),
-#     Column('name', String, nullable=False),
-#     Column('permissions', JSON),
-# )
-
 class Role(Base):
     __tablename__ = 'role'
     __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     permissions = Column(JSON)
-
-# user = Table(
-#     'user',
-#     metadata,
-#     Column('id', UUID, primary_key=True),
-#     Column('email', String, nullable=False),
-#     Column('username', String, nullable=False),
-#     Column('first_name', String),
-#     Column('last_name', String),
-#     Column('phone', String),
-#     Column('hashed_password', String, nullable=False),
-#     Column('registered_at', TIMESTAMP, default=datetime.utcnow),
-#     Column('role_id', Integer, ForeignKey(role.c.id)),
-#     Column('is_active', Boolean, default=True, nullable=False),
-#     Column('is_superuser', Boolean, default=True, nullable=False),
-#     Column('is_verified', Boolean, default=True, nullable=False),
-# )
 
 
 class User(SQLAlchemyBaseUserTableUUID, Base):
